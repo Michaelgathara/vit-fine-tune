@@ -1,0 +1,9 @@
+torch
+torchvision
+transformers
+datasets
+accelerate
+scikit-learn
+Pillow
+requests
+tqdm
