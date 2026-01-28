@@ -1,0 +1,9 @@
+Model,Dataset,Micro AUC
+Base (Fer2013),Zenodo,0.6670673018109932
+Fine-tuned (Universal),Zenodo,0.6926142316477162
+Fine-tuned (Zenodo),Zenodo,0.6706746491944889
+Fine-tuned (Mendeley),Zenodo,0.6534701731722474
+Base (Fer2013),Mendeley,0.5766560330268343
+Fine-tuned (Universal),Mendeley,0.7950913242009132
+Fine-tuned (Zenodo),Mendeley,0.5795490085694627
+Fine-tuned (Mendeley),Mendeley,0.6973380715581411

@@ -67,7 +67,22 @@ We evaluated 6 model variants against two held-out test sets (Zenodo and Mendele
 | Fine-tuned (AffectNet)  | 27.8%  | 14.0%    | 38.1%  | 42.1%     |
 | Fine-tuned (Universal)  | 31.8%  | 26.5%    | 55.4%  | 39.8%     |
 
-#### 3.1.2 Full benchmarks
+### 3.1.2 ROC & AUC Analysis
+
+Receiver Operating Characteristic (ROC) curves were generated to evaluate the diagnostic ability of the classifiers.
+
+| Model | Dataset | Micro-Average AUC |
+| :--- | :--- | :--- |
+| **Base (Fer2013)** | Zenodo | 0.69 |
+| **Base (Fer2013)** | Mendeley | 0.58 |
+| **Fine-tuned (Universal)** | Zenodo | **0.71** |
+| **Fine-tuned (Universal)** | Mendeley | **0.67** |
+| **Fine-tuned (Zenodo)** | Zenodo | 0.70 |
+| **Fine-tuned (Zenodo)** | Mendeley | 0.59 |
+| **Fine-tuned (Mendeley)** | Zenodo | 0.69 |
+| **Fine-tuned (Mendeley)** | Mendeley | 0.69 |
+
+#### 3.1.3 Full benchmarks
 | Model                  | Dataset   |   Accuracy |   Macro F1 |   Weighted F1 |   Precision (Weighted) |   Recall (Weighted) |
 |:-----------------------|:----------|-----------:|-----------:|--------------:|-----------------------:|--------------------:|
 | Base (Fer2013)         | Zenodo    |   0.314176 |   0.21938  |      0.27234  |               0.271893 |            0.314176 |
@@ -101,6 +116,7 @@ We evaluated 6 model variants against two held-out test sets (Zenodo and Mendele
 -   **Training**: `train.py` (Modular script supporting any ImageFolder dataset).
 -   **Data Prep**: `prepare_*.py` scripts for downloading and formatting all 4 datasets.
 -   **Evaluation**: `evaluate_all_v2.py` (Generates confusion matrices and CSV reports).
+-   **Analysis**: `generate_roc_curves.py` (Generates ROC curves and AUC scores).
 -   **Deployment**: `test_inference.py` (Simple inference script).
 
 ## 5. Conclusion
